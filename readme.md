@@ -6,16 +6,16 @@
 
 #### Clonar repositório
 ``` 
-$ git clone
+$ git clone https://github.com/MaickSilva/enext-challenge.git
 ``` 
 
 #### Entrar na pasta do projeto
 ``` 
-$ cd nomeDoProjeto
+$ cd enext-challenge
 ``` 
 
-#### Instalar gulp-cli [Site do Gulp](https://gulpjs.com/)
-Pode ser que seja necessario usar sudo 
+#### Instalar gulp-cli [Gulp](https://gulpjs.com/)
+Pode ser que seja necessário usar sudo 
 ``` 
 $ npm install gulp-cli -g
 ``` 
@@ -26,7 +26,8 @@ $ npm install
 ``` 
 
 #### Se tudo correu bem agora só basta execultar o gulp
-Certifiquesse de estar no diretorio raiz do projeto
 ```
 $ gulp
 ``` 
+
+Após executar o gulp é só aguardar que irá abrir uma nova guia no seu navegador com o projeto.
