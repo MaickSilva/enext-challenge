@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Projeto consumindo a Dog Api, api pública que lista raças de cachorros">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Consulta Dogs</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main>
+    <header class="header ">
+      <h1 class="header__title">Dog!</h1>
+    </header>
+    <section class="container" >
+      <div class="select__wrapper ">
+        <label for="select-breeds" class="select__title">Selecione uma raça</label>
+        <select id="select-breeds" class="select__breeds">
+        </select>
+      </div>
+        
+        
+      <div class="content-wrapper">
+        <div id="card-wrapper">
+          <div class="card">
+          </div>
+          
+          <div class="card card--options">
+
+            <div class="card__header">
+              <span>Opções do Usuário</span>
+            </div>            
+
+            <div class="card__body">
+          
+              <div class="card__option">
+                <label for="select-color">Selecione uma cor para a fonte</label>
+                <select id="select-color" class="select__color">
+                  <option data-color="#ffffff" value="#ffffff">Branco</option>
+                  <option data-color="#D35400" value="#D35400">Laranja</option>
+                  <option data-color="#2f6276" value="#2f6276">Azul</option>
+                  <option data-color="#ffc0cb" value="#ffc0cb">Pink</option>
+                  <option data-color="#9b0000" value="#9b0000">Vermelho</option>
+                </select>
+              </div>
+          
+              <div class="card__option">
+                <label for="select-font">Selecione uma fonte</label>
+                <select id="select-font" class="select__font">
+                  <option data-font="Poppins" value="Poppins">Poppins</option>
+                  <option data-font="Roboto" value="Roboto">Roboto</optionvalue="Roboto">
+                  <option data-font="Nunito Sans" value="Nunito Sans">Nunito Sans</option>
+                  <option data-font="PT Sans Narrow" value="PT Sans Narrow">PT Sans Narrow</option>
+                  <option data-font="Quicksand" value="Quicksand">Quicksand</option>
+                </select>    
+              </div>
+
+            </div>
+
+            <div class="preferencias">
+              <h3>Deseja Salvar suas configurações?</h3>
+              <button class="preferencias__btn">Salvar</button>
+
+
+              <div class="toast">
+                <div class="toast__msg">Seus dados foram salvos com sucesso!!!</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </section>
+   
+  </main>
+
+  <script src="js/main.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,34 @@
+// -----------------------------------------------------------
+// BEM - https://en.bem.info/method/
+// Estruturação do CSS em BEM
+// -----------------------------------------------------------
+
+@mixin element($element, $parent: false) {
+  @if $parent != false {
+    #{$parent}__#{$element} {
+      @content;
+    }
+  } @else {
+    &__#{$element} {
+      @content;
+    }
+  }
+}
+
+@mixin modifier($modifier) {
+  &--#{$modifier} {
+      @content;
+  }
+}
+
+@mixin e($element, $parent: false) {
+  @include element($element, $parent)  {
+      @content;
+  }
+}
+
+@mixin m($modifier) {
+  @include modifier($modifier) {
+      @content;
+  }
+}
