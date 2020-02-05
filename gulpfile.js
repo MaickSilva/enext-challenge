@@ -1,7 +1,6 @@
 // Adiciona os modulos instalados
 const gulp = require('gulp');
 const sass = require('gulp-sass');
-const autoprefixer = require('gulp-autoprefixer');
 const htmlmin = require('gulp-htmlmin');
 const notify = require('gulp-notify');
 const concat = require('gulp-concat');
@@ -33,7 +32,7 @@ gulp.task('html', buildHtml)
 //Função para compilar o SASS e adicionar os prefixos
 function buildScss() {
   return gulp
-  .src('./src/scss/style.scss').pipe(autoprefixer({browsers: ['last 2 versions'],cascade: false}))
+  .src('./src/scss/style.scss')
   .pipe(sass({outputStyle: 'compressed'}))
   .on('error', notify.onError({title: "erro scss", message: "<%= error.message %>"}))
   .pipe(gulp.dest('./dist/css/'))
@@ -52,7 +51,7 @@ function buildJs() {
   .pipe(concat('main.js'))
   .pipe(babel({presets: ['@babel/env'] }))
   .pipe(uglify())
-  .on('error', notify.onError({title: "erro scss", message: "<%= error.message %>"}))
+  .on('error', notify.onError({title: "erro Javascript", message: "<%= error.message %>"}))
   .pipe(gulp.dest('./dist/js/'))
   .pipe(browserSync.stream());
 }
@@ -66,9 +65,8 @@ gulp.task('appjs', function(done){
 // Função para iniciar o browser
 function browser() {
   browserSync.init({
-    // proxy: 'seilaoqvemaqui/'
     server: {
-      baseDir: './dist/' // diretorio da raiz ./dist/
+      baseDir: './dist/'
     }
   })
 }
